@@ -1,4 +1,3 @@
-// src/components/ProductDetails.js
 import React, { useContext, useEffect } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { useParams, useNavigate } from "react-router-dom";
@@ -10,7 +9,7 @@ const ProductDetails = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const product = products.find((product) => product.id === id); // Ensure id match
+    const product = products.find((product) => product.id === id);
     setSelectedProduct(product);
   }, [id, products, setSelectedProduct]);
 
@@ -27,8 +26,7 @@ const ProductDetails = () => {
         className="large-image"
       />
       <h1>{selectedProduct.name}</h1>
-      <p>{selectedProduct.shortDescription}</p>{" "}
-      {/* Adjusted to shortDescription */}
+      <p>{selectedProduct.shortDescription}</p>
       <p>
         <strong>Price: </strong>${selectedProduct.price}
       </p>

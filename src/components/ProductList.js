@@ -1,4 +1,3 @@
-// src/components/ProductList.js
 import React, { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import { Link } from "react-router-dom";

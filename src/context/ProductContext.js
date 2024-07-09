@@ -1,4 +1,3 @@
-// src/context/ProductContext.js
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
@@ -30,12 +29,12 @@ export const ProductProvider = ({ children }) => {
           console.log(response.data.results);
         } else {
           console.error("Unexpected response structure:", response.data);
-          setProducts([]); // Set to empty array if the structure is unexpected
+          setProducts([]);
         }
       })
       .catch((error) => {
         console.error("Error fetching products:", error);
-        setProducts([]); // Set to empty array in case of error
+        setProducts([]);
       });
   }, []);
 
